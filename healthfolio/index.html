@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HealthFolio</title>
+<style>
+  :root{--bg:#f6f8f9;--card:#fff;--ink:#12232b;--muted:#5c7079;--brand:#0e7c7b;--line:#e3eaed}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+  .wrap{max-width:760px;margin:0 auto;padding:32px 20px 64px}
+  header{text-align:center;padding:40px 0 24px}
+  .logo{font-size:40px}
+  h1{font-size:32px;margin:12px 0 6px}
+  .tag{color:var(--muted);font-size:18px;margin:0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:16px 0}
+  .card h2{margin:0 0 8px;font-size:20px;color:var(--brand)}
+  .links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
+  .links a{display:inline-block;padding:11px 18px;border:1px solid var(--brand);border-radius:10px;color:var(--brand);text-decoration:none;font-weight:600}
+  .links a:hover{background:var(--brand);color:#fff}
+  ul{padding-left:20px}
+  footer{text-align:center;color:var(--muted);font-size:14px;margin-top:40px}
+  a{color:var(--brand)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">🩺</div>
+    <h1>HealthFolio</h1>
+    <p class="tag">Your family's medical records — private, on your device.</p>
+  </header>
+
+  <div class="card">
+    <h2>What it does</h2>
+    <p>HealthFolio scans and organizes your family's pharmacy bills, prescriptions, lab reports and hospital discharge summaries — then builds an insurer-ready claim package in a couple of taps.</p>
+    <ul>
+      <li>Scan &amp; auto-organize medical documents by family member</li>
+      <li>See a visual "patient journey" timeline of visits, admissions and receipts</li>
+      <li>Generate a categorized, insurer-ready claim PDF</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Private by design</h2>
+    <p>Records are stored <strong>on your device</strong> — there is no HealthFolio account and no HealthFolio server. An optional AI "detailed scan" uses a provider you choose, with your own API key, and redacts personal identifiers before anything is sent. It's off unless you turn it on.</p>
+  </div>
+
+  <div class="links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="support.html">Support</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="setup-ai.html">Set up a free AI model</a>
+  </div>
+
+  <footer>
+    <p>© 2026 Rivani Labs · HealthFolio is a record-keeping tool, not a medical device, and does not provide medical advice.</p>
+  </footer>
+</div>
+</body>
+</html>

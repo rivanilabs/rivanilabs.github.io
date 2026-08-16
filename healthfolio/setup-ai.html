@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HealthFolio — Set up a free AI model</title>
+<style>
+  :root{--bg:#f6f8f9;--card:#fff;--ink:#12232b;--muted:#5c7079;--brand:#0e7c7b;--line:#e3eaed}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+  .wrap{max-width:760px;margin:0 auto;padding:28px 20px 64px}
+  a{color:var(--brand)}
+  .back{font-size:14px}
+  h1{font-size:28px;margin:18px 0 4px}
+  .sub{color:var(--muted);margin:0 0 22px}
+  h2{font-size:19px;color:var(--brand);margin:30px 0 6px}
+  .lead{background:#e7f4f4;border:1px solid #bfe3e2;border-radius:12px;padding:14px 16px}
+  ol{padding-left:22px} ol li{margin:8px 0}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#eef3f4}
+  .pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px}
+  .free{background:#dff3e4;color:#1a7a3d} .paid{background:#fdeede;color:#a75b12}
+  .note{color:var(--muted);font-size:14px}
+  footer{color:var(--muted);font-size:14px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="back"><a href="index.html">← HealthFolio</a></p>
+  <h1>Set up a free AI model</h1>
+  <p class="sub">How to turn on "detailed scan" for free.</p>
+
+  <p class="lead">HealthFolio works out of the box with <strong>no AI key at all</strong> — the free, on-device scan reads the headline details of a document offline. Turning on an AI model unlocks <strong>detailed scan</strong>: full line items, findings, and richer extraction. You can do this <strong>for free</strong> with Google Gemini's free tier.</p>
+
+  <h2>Which model should I use?</h2>
+  <table>
+    <tr><th>Provider</th><th>Cost</th><th>Good for</th></tr>
+    <tr><td><strong>Google Gemini</strong> <span class="pill free">FREE TIER</span></td><td>Free, with a daily usage limit</td><td>The recommended free choice — good accuracy on bills, prescriptions, and reports.</td></tr>
+    <tr><td>Anthropic (Claude)</td><td><span class="pill paid">PAID</span> pay-as-you-go</td><td>Highest accuracy; needs a billing setup.</td></tr>
+    <tr><td>OpenAI</td><td><span class="pill paid">PAID</span> pay-as-you-go</td><td>Alternative paid option; needs a billing setup.</td></tr>
+  </table>
+  <p class="note">Free-tier limits and model names change over time — see each provider's rate-limits page (linked below) for current details. Anthropic and OpenAI do not offer a free API tier; they require adding a payment method.</p>
+
+  <h2>Recommended: Google Gemini (free)</h2>
+  <ol>
+    <li>Go to <a href="https://aistudio.google.com/apikey">Google AI Studio → API keys</a> and sign in with a Google account.</li>
+    <li>Click <strong>Create API key</strong>. Copy the key (it starts with <code>AIza…</code>).</li>
+    <li>In HealthFolio, open <strong>Settings</strong> and turn on <strong>Detailed scanning</strong>.</li>
+    <li>Choose <strong>Gemini (Google)</strong> as the provider and paste your key.</li>
+    <li>Pick a free-tier model (a <strong>Gemini Flash Lite</strong> model is the cheapest and works well). Keep <strong>Redact personal info before upload</strong> switched on.</li>
+    <li>Scan a document and choose detailed scan. That's it.</li>
+  </ol>
+  <p class="note">Free-tier requests are capped per day and reset daily. If you hit the limit, wait for the reset or switch back to the free on-device scan. Current limits: <a href="https://ai.google.dev/gemini-api/docs/rate-limits">Gemini API rate limits</a>.</p>
+
+  <h2>Provider links</h2>
+  <table>
+    <tr><th>Provider</th><th>Get an API key</th><th>Pricing / limits</th></tr>
+    <tr><td>Google Gemini <span class="pill free">FREE TIER</span></td><td><a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a></td><td><a href="https://ai.google.dev/gemini-api/docs/rate-limits">Rate limits</a></td></tr>
+    <tr><td>Anthropic (Claude)</td><td><a href="https://console.anthropic.com/settings/keys">console.anthropic.com</a></td><td><a href="https://www.anthropic.com/pricing">Pricing</a></td></tr>
+    <tr><td>OpenAI</td><td><a href="https://platform.openai.com/api-keys">platform.openai.com</a></td><td><a href="https://openai.com/api/pricing/">Pricing</a></td></tr>
+  </table>
+
+  <h2>Is my data safe?</h2>
+  <p>Your API key is stored in your device's Keychain and never sent to us. When you run a detailed scan, the document goes <strong>directly from your device to the provider you chose</strong>, using your own key, and personal identifiers are redacted first (by default). Your use of the provider is governed by that provider's terms. See our <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <footer>© 2026 Rivani Labs · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></footer>
+</div>
+</body>
+</html>
